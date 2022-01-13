@@ -15,6 +15,7 @@ const Home = () => {
   return (
     <div>
       <button onClick={connect}>Connect to Wallet</button>
+      <p>{account}</p>
     </div>
   );
 };
