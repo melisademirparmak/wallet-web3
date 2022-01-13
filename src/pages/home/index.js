@@ -12,10 +12,22 @@ const Home = () => {
       console.log(ex);
     }
   };
+
+  const disconnect = () => {
+    try {
+      deactive();
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
   return (
     <div>
-      <button onClick={connect}>Connect to Wallet</button>
+      <button onClick={connect}>
+        {active ? 'Connected' : 'Connect a Wallet'}
+      </button>
       <p>{account}</p>
+      <button onClick={disconnect}>Deactive</button>
     </div>
   );
 };
