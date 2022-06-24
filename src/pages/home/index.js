@@ -3,7 +3,7 @@ import { useWeb3React } from '@web3-react/core';
 import { injected } from '../../components/connectors/injected';
 
 const Home = () => {
-  const { active, account, activate, deactive } = useWeb3React();
+  const { active, account, activate, deactivate } = useWeb3React();
 
   const connect = async () => {
     try {
@@ -15,7 +15,7 @@ const Home = () => {
 
   const disconnect = () => {
     try {
-      deactive();
+      deactivate();
     } catch (ex) {
       console.log(ex);
     }
